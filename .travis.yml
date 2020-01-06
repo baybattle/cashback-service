@@ -2,6 +2,8 @@ language: java
 jdk: oraclejdk11
 
 script: mvn -e verify
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email:
